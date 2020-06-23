@@ -1,10 +1,14 @@
 //Variable initializations
-var bruh=0;
+let bruh=0;
 
 //Working code
-maybe(bruh);
+IfError(bruh);
 
 //Functions
-function maybe(bruh) {
-	console.log(bruh);
+function IfError(ErrorCode) {
+	
+	if (ErrorCode!=0) {
+		console.log(`Error code: ${ErrorCode}`);	
+	}
+	
 }
