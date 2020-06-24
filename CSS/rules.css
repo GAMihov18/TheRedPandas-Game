@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../images/bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.nav-container{
+	width: 100%;
+	height: 140px;
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.20);
+	position: fixed;
+	top: 0px;
+}
+
+.nav-container ul{
+	margin-top: 50px;
+	display: flex;
+	float: right;
+	list-style: none;
+}
+
+.nav-container ul li a{
+	padding: 0px 30px;
+}
+
+.nav-container a{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+#red a:hover{
+	color: #f03a3a;
+}
+
+#yellow a:hover{
+	color: #fffc26;
+}
+
+#green a:hover{
+	color: #26a633;
+}
+
+#blue a:hover{
+	color: #214dff;
+}
+
+#purple a:hover{
+	color: #bf0cf5;
+}
+
+.title{
+	text-align: center;
+	font-size: 30pt;
+}
+
+.rules{
+	margin-top: 9%;
+	font-family: 'Press Start 2P', cursive;
+	color: #fff;
+}
+
+.rules ul{
+	list-style: square;
+}
+
+.rules p{
+	font-family: 'Electrolize', sans-serif;
+	color: #fff;
+	font-size: 18pt;
+}
+.gameplay p{
+	font-size: 15pt;
+}
+
+fieldset{
+	margin-left: 7%;
+	margin-right: 7%;
+}
