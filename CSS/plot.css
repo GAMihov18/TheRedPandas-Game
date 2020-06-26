@@ -62,3 +62,14 @@ body{
 	font-family: 'Press Start 2P', cursive;
 	color: #fff;
 }
+
+fieldset{
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.content{
+	font-family: 'Electrolize', sans-serif;
+	color: #fff;
+	font-size: 18pt;
+}
