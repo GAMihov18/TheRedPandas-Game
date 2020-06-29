@@ -44,6 +44,33 @@ const areas=[
   area35= document.getElementById('area35'),
   area36= document.getElementById('area36'),
 ]
+const memory={
+  player1:{
+    rolledSix:false,
+    hasPawnOut:false,
+    pawn1:{
+      position,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn2:{
+      position,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn3:{
+      position,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn4:{
+      position,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+  },
+};
+
 areas.forEach(element => {
   element.classList='hidden';
 });
