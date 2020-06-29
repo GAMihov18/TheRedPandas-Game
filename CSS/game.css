@@ -89,7 +89,7 @@ img{
 	background-size:contain;
 }
 .R-visible{
-	background-image: url(/images/R\ letter.png);
+	background-image: url(/images/RLetter.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
@@ -98,7 +98,7 @@ img{
 }
 
 .U-visible{
-	background-image: url(/images/U\ letter.png);
+	background-image: url(/images/Uletter.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
