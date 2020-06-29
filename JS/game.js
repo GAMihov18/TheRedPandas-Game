@@ -43,28 +43,28 @@ const areas=[
   area34= document.getElementById('area34'),
   area35= document.getElementById('area35'),
   area36= document.getElementById('area36'),
-]
+];
 const memory={
   player1:{
     rolledSix:false,
     hasPawnOut:false,
     pawn1:{
-      position,
+      position:0,
       isOut:false,
       hasBeenOnSpawn:false,
     },
     pawn2:{
-      position,
+      position:0,
       isOut:false,
       hasBeenOnSpawn:false,
     },
     pawn3:{
-      position,
+      position:0,
       isOut:false,
       hasBeenOnSpawn:false,
     },
     pawn4:{
-      position,
+      position:0,
       isOut:false,
       hasBeenOnSpawn:false,
     },
