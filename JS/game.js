@@ -143,17 +143,22 @@ const memory={
   },
 };
 
-areas.forEach(element => {
-  element.classList='hidden';
-});
+console.log(memory);
 
 //Code
-
+hideLoad();
 
 //Functions
+function hideLoad(){
+  areas.forEach(element =>{
+    element.classList='hidden';
+  })
+}
+//Random number generator
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+//check which team is something
 function checkTeam(teamnumber){
   if (teamnumber===1) {
     areas.forEach(element => {
