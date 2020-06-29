@@ -71,6 +71,41 @@ body{
 	margin: 0 auto;
 }
 img{
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
+}
+
+.B-visible{
+	background-image: url(/images/Trouble_B.png);
+	visibility: visible;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-size:contain;
+}
+.R-visible{
+	background-image: url(/images/R\ letter.png);
+	visibility: visible;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-size:contain;
+}
+
+.U-visible{
+	background-image: url(/images/U\ letter.png);
+	visibility: visible;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-size:contain;
+}
+
+.H-visible{
+	background-image: url(/images/HletterBruh.png);
+	visibility: visible;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-size:contain;
 }
