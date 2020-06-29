@@ -3,7 +3,7 @@ let teamnumber=0;
 let turn=0;
 let move;
 const infoTurn=document.getElementById('info-turnPerson');
-const infoTurnAmount=document.getElementById('info-turnAmount')
+const infoTurnAmount=document.getElementById('info-turnAmount');
 const dice = document.getElementById('die');
 let rollDie = document.getElementById('roll-button').addEventListener('click',rollDice);
 const areas=[
@@ -69,6 +69,78 @@ const memory={
       hasBeenOnSpawn:false,
     },
   },
+  player2:{
+    rolledSix:false,
+    hasPawnOut:false,
+    pawn1:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn2:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn3:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn4:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+  },
+  player3:{
+    rolledSix:false,
+    hasPawnOut:false,
+    pawn1:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn2:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn3:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn4:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+  },
+  player4:{
+    rolledSix:false,
+    hasPawnOut:false,
+    pawn1:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn2:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn3:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+    pawn4:{
+      position:0,
+      isOut:false,
+      hasBeenOnSpawn:false,
+    },
+  },
 };
 
 areas.forEach(element => {
@@ -87,25 +159,25 @@ function checkTeam(teamnumber){
     areas.forEach(element => {
       element.classList='B-visible';
     });
-    infoTurn.innerHTML=`<span style="color: white;">Team Purple's Turn</span>`;
+    infoTurn.innerHTML=`<span style="color: white;">Belle's Turn</span>`;
   }
   if (teamnumber===2) {
     areas.forEach(element => {
       element.classList='R-visible';
     });
-    infoTurn.innerHTML=`<span style="color: white;">Team Orange's Turn</span>`;
+    infoTurn.innerHTML=`<span style="color: white;">Robert's Turn</span>`;
   }
   if (teamnumber===3) {
     areas.forEach(element => {
       element.classList='U-visible';
     });
-    infoTurn.innerHTML=`<span style="color: white;">Team Green's Turn</span>`;
+    infoTurn.innerHTML=`<span style="color: white;">Ursule's Turn</span>`;
   }
   if (teamnumber===4) {
     areas.forEach(element => {
       element.classList='H-visible';
     });
-    infoTurn.innerHTML=`<span style="color: white;">Team Blue's Turn</span>`;
+    infoTurn.innerHTML=`<span style="color: white;">Harry's Turn</span>`;
   }
 }
 function rollDice() {
