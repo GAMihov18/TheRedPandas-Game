@@ -45,7 +45,9 @@ areas.forEach(element =>{
 });
 
 //Functions
-
+function diceNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
 
 //Logs 0 if reach here
 console.log(0);
