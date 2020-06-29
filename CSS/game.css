@@ -62,3 +62,15 @@ body{
 	font-family: 'Press Start 2P', cursive;
 	color: #fff;
 }
+.game-board{
+	background-image: url(/images/Trouble_Board_PSD1.jpg);
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 600px;
+	background-size:contain;
+	margin: 0 auto;
+}
+img{
+	width: 100px;
+	height: 100px;
+}
