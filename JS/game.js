@@ -1,7 +1,11 @@
 //Variables
-let teamnumber;
-let turn;
+let teamnumber=0;
+let turn=0;
 let move;
+const infoTurn=document.getElementById('info-turnPerson');
+const infoTurnAmount=document.getElementById('info-turnAmount')
+const dice = document.getElementById('die');
+let rollDie = document.getElementById('roll-button').addEventListener('click',rollDice);
 const areas=[
   area1= document.getElementById('area1'),
   area2= document.getElementById('area2'),
@@ -40,13 +44,70 @@ const areas=[
   area35= document.getElementById('area35'),
   area36= document.getElementById('area36'),
 ]
-areas.forEach(element =>{
-  console.log(element);
+areas.forEach(element => {
+  element.classList='hidden';
 });
 
+//Code
+
+
 //Functions
-function diceNumber(min, max) {
+function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function checkTeam(teamnumber){
+  if (teamnumber===1) {
+    areas.forEach(element => {
+      element.classList='B-visible';
+    });
+    infoTurn.innerHTML=`<span style="color: white;">Team Purple's Turn</span>`;
+  }
+  if (teamnumber===2) {
+    areas.forEach(element => {
+      element.classList='R-visible';
+    });
+    infoTurn.innerHTML=`<span style="color: white;">Team Orange's Turn</span>`;
+  }
+  if (teamnumber===3) {
+    areas.forEach(element => {
+      element.classList='U-visible';
+    });
+    infoTurn.innerHTML=`<span style="color: white;">Team Green's Turn</span>`;
+  }
+  if (teamnumber===4) {
+    areas.forEach(element => {
+      element.classList='H-visible';
+    });
+    infoTurn.innerHTML=`<span style="color: white;">Team Blue's Turn</span>`;
+  }
+}
+function rollDice() {
+    let rand = randomNumber(1,6);
+    if (rand===1) {
+      dice.classList='one-visible';
+    }
+    else if (rand===2) {
+      dice.classList='two-visible';
+    }
+    else if (rand===3) {
+      dice.classList='three-visible';
+    }
+    else if (rand===4) {
+      dice.classList='four-visible';
+    }
+    else if (rand===5) {
+      dice.classList='five-visible';
+    }
+    else if (rand===6) {
+      dice.classList='six-visible';
+    }
+    teamnumber++
+    if (teamnumber==5) {
+      teamnumber=1;
+    }
+    checkTeam(teamnumber);
+    turn++;
+    infoTurnAmount.innerHTML=`Turn: ${turn}`;
 }
 
 //Logs 0 if reach here

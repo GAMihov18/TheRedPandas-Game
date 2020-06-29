@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body{
+	position: relative;
 	margin: 0px;
 	padding: 0px;
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../images/bg.jpg");
@@ -69,6 +70,7 @@ body{
 	height: 600px;
 	background-size:contain;
 	margin: 0 auto;
+	position: relative;
 }
 img{
 	width: 50px;
@@ -111,4 +113,74 @@ img{
 	height: 50px;
 	width: 50px;
 	background-size:contain;
+}
+.one-visible{
+	background-image: url(/images/DiceSides/Dice1.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.two-visible{
+	background-image: url(/images/DiceSides/Dice2.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.three-visible{
+	background-image: url(/images/DiceSides/Dice3.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.four-visible{
+	background-image: url(/images/DiceSides/Dice4.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.five-visible{
+	background-image: url(/images/DiceSides/Dice5.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.six-visible{
+	background-image: url(/images/DiceSides/Dice6.png);
+	visibility: visible;
+	background-size:contain;
+	position: absolute;
+	height: 80px;
+	width: 100px;
+	background-repeat: no-repeat;
+}
+.console-div{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 50%;
+	width: 20%;
+	right:20px;
+	border: solid rgba(0, 0, 0, 0) 10px;
+}
+#info-turnAmount{
+	position: absolute;
+	top:42px;
+	left:200px;	
+}
+p{
+	color: white;
 }

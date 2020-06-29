@@ -1,180 +1,185 @@
 #area1{
   position: absolute;
-  top: 270px;
-  right: 849px;
+  top: 80px;
+  right: 467px;
 }
 #area2{
   position: absolute;
-  top: 307px;
-  right: 876px;
+  top: 117px;
+  right: 494px;
 }
 #area3{
  position: absolute;
- top: 340px;
- right: 900px;
+ top: 150px;
+ right: 518px;
 }
 #area4{
   position: absolute;
-  top: 385px;
-  right: 914px;
+  top: 195px;
+  right: 533px;
 }
 #area5{
   position: absolute;
-  top: 435px;
-  right: 914px;
+  top: 245px;
+  right: 533px;
 }
 #area6{
   position: absolute;
-  top: 487px;
-  right: 914px;
+  top: 297px;
+  right: 533px;
 }
 #area7{
   position: absolute;
-  top: 541px;
-  right: 914px;
+  top: 351px;
+  right: 533px;
 }
 #area8{
   position: absolute;
-  top: 586px;
- right: 898px;
+  top: 396px;
+ right: 516px;
 }
 #area9{
   position: absolute;
-  top: 622px;
-  right: 876px;
+  top: 432px;
+  right: 494px;
 }
 #area10{
   position: absolute;
-  top: 658px;
-  right: 849px;
+  top: 468px;
+  right: 467px;
 }
 #area11{
   position: absolute;
-  top: 687px;
-  right: 810px;
+  top: 497px;
+  right: 428px;
 }
 #area12{
   position: absolute;
-  top: 707px;
-  right: 775px;
+  top: 517px;
+  right: 393px;
 }
 #area13{
   position: absolute;
-  top: 718px;
-  right: 732px;
+  top: 528px;
+  right: 350px;
 }
 #area14{
   position: absolute;
-  top: 718px;
-  right: 683px;
+  top: 528px;
+  right: 301px;
 }
 #area15{
   position: absolute;
-  top: 718px;
-  right: 628px;
+  top: 528px;
+  right: 246px;
 }
 #area16{
   position: absolute;
-  top: 718px;
-  right: 575px;
+  top: 528px;
+  right: 193px;
 }
 #area17{
   position: absolute;
-  top: 705px;
-  right: 530px;
+  top: 514px;
+  right: 147px;
 }
 #area18{
   position: absolute;
-  top: 685px;
-  right: 493px;
+  top: 495px;
+  right: 112px;
 }
 #area19{
   position: absolute;
-  top: 656px;
-  right: 457px;
+  top: 466px;
+  right: 75px;
 }
 #area20{
   position: absolute;
-  top: 623px;
-  right: 429px;
+  top: 433px;
+  right: 47px;
 }
 #area21{
   position: absolute;
-  top: 587px;
-  right: 406px;
+  top: 397px;
+  right: 24px;
 }
 #area22{
   position: absolute;
-  top: 542px;
-  right: 394px;
+  top: 352px;
+  right: 12px;
 }
 #area23{
   position: absolute;
-  top: 490px;
-  right: 394px;
+  top: 300px;
+  right: 12px;
 }
 #area24{
   position: absolute;
-  top: 435px;
-  right: 394px;
+  top: 245px;
+  right: 12px;
 }
 #area25{
   position: absolute;
-  top: 385px;
-  right: 395px;
+  top: 195px;
+  right: 12px;
 }
 #area26{
   position: absolute;
-  top: 340px;
-  right: 407px;
+  top: 150px;
+  right: 25px;
 }
 #area27{
   position: absolute;
-  top: 305px;
-  right: 430px;
+  top: 115px;
+  right: 48px;
 }
 #area28{
   position: absolute;
-  top: 267px;
-  right: 458px;
+  top: 77px;
+  right: 76px;
 }
 #area29{
   position: absolute;
-  top: 240px;
-  right: 496px;
+  top: 50px;
+  right: 114px;
 }
 #area30{
   position: absolute;
-  top: 220px;
-  right: 530px;
+  top: 30px;
+  right: 148px;
 }
 #area31{
   position: absolute;
-  top: 208px;
-  right: 578px;
+  top: 18px;
+  right: 196px;
 }
 #area32{
   position: absolute;
-  top: 208px;
-  right: 630px;
+  top: 18px;
+  right: 248px;
 }
 #area33{
   position: absolute;
-  top: 208px;
-  right: 685px;
+  top: 18px;
+  right: 302px;
 }
 #area34{
   position: absolute;
-  top: 208px;
-  right: 735px;
+  top: 18px;
+  right: 353px;
 }
 #area35{
   position: absolute;
-  top: 222px;
-  right: 781px;
+  top: 32px;
+  right: 399px;
 }
 #area36{
   position: absolute;
-  top: 244px;
-  right: 816px;
+  top: 54px;
+  right: 434px;
+}
+#die{
+  position: absolute;
+  top:259px;
+  right:241px;
 }
