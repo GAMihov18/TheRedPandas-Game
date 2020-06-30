@@ -184,3 +184,8 @@ img{
 p{
 	color: white;
 }
+#reset-button{
+	position: absolute;
+	top:300px;
+	right: 10px;
+}

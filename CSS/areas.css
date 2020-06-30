@@ -178,6 +178,86 @@
   top: 54px;
   right: 434px;
 }
+#spawn-area1{
+  position: absolute;
+  top: 35px;
+  right: 510px;
+}
+#spawn-area2{
+  position: absolute;
+  top: 75px;
+  right: 545px;
+}
+#spawn-area3{
+  position: absolute;
+  top: 10px;
+  right: 470px;
+}
+#spawn-area4{
+  position: absolute;
+  top: 5px;
+  right: 540px;
+}
+#spawn-area5{
+  position: absolute;
+  top: 35px;
+  right: 35px;
+}
+#spawn-area6{
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+#spawn-area7{
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+#spawn-area8{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#spawn-area9{
+  position: absolute;
+  top: 505px;
+  right: 35px;
+}
+#spawn-area10{
+  position: absolute;
+  top: 460px;
+  right: 10px;
+}
+#spawn-area11{
+  position: absolute;
+  top: 533px;
+  right: 70px;
+}
+#spawn-area12{
+  position: absolute;
+  top: 540px;
+  right: 5px;
+}
+#spawn-area13{
+  position: absolute;
+  top: 515px;
+  right: 510px;
+}
+#spawn-area14{
+  position: absolute;
+  top: 470px;
+  right: 545px;
+}
+#spawn-area15{
+  position: absolute;
+  top: 540px;
+  right: 470px;
+}
+#spawn-area16{
+  position: absolute;
+  top: 550px;
+  right: 540px;
+}
 #die{
   position: absolute;
   top:259px;
