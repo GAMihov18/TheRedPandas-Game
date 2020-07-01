@@ -165,6 +165,8 @@ console.log(memory);
 //Code
 hideLoaded();
 loadSpawnPoints();
+
+
 //Functions
 function hideLoaded(){
   areas.forEach(element =>{
