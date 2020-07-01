@@ -176,19 +176,32 @@ function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 //check which team is something
-function checkTeam(teamnumber){
+function checkTeam(teamnumber, roll){
   if (teamnumber===1) {
     infoTurn.innerHTML=`<span style="color: white;">Belle's Turn</span>`;
+    player=memory.player1;
+    console.log(player);
+    movePawns(roll, player,teamnumber);
   }
-  if (teamnumber===2) {
+  else if (teamnumber===2) {
     infoTurn.innerHTML=`<span style="color: white;">Robert's Turn</span>`;
+    player=memory.player2;
+    console.log(player);
+    movePawns(roll, player,teamnumber);
   }
-  if (teamnumber===3) {
+  else if (teamnumber===3) {
     infoTurn.innerHTML=`<span style="color: white;">Ursule's Turn</span>`;
+    player=memory.player3;
+    console.log(player);
+    movePawns(roll, player,teamnumber);
   }
-  if (teamnumber===4) {
+  else if (teamnumber===4) {
     infoTurn.innerHTML=`<span style="color: white;">Harry's Turn</span>`;
+    player=memory.player4;
+    console.log(player);
+    movePawns(roll, player,teamnumber);
   }
+
 }
 function rollDice() {
     let rand = randomNumber(1,6);
@@ -214,10 +227,11 @@ function rollDice() {
     if (teamnumber==5) {
       teamnumber=1;
     }
-    checkTeam(teamnumber);
+    checkPerfectRole(rand,teamnumber);
+    checkTeam(teamnumber, rand);
     turn++;
     infoTurnAmount.innerHTML=`Turn: ${turn}`;
-    checkPerfectRole(rand,teamnumber);
+    
 }
 function loadSpawnPoints(){
   memory.player1.pawn1.pawnSpawnPoint.classList='B-visible';
@@ -245,30 +259,132 @@ function resetGame(){
   infoTurnAmount.innerHTML='';
   infoTurn.innerHTML='';
 }
-function movePawns(rollnumber,team) {
-  for (let i = 0; i < rollnumber; i++) {
+function movePawns(rollnumber,team, rawteamnumber) {
+  if (rawteamnumber===1) {
+    if (team.pawn1.isOut===true) {
+      if (team.pawn1.position<=36) {
+        areas[team.pawn1.position-1].classList=`B-visible`;
+
+        team.pawn1.position+rollnumber;
+      }
+      else{
+        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
+      }
+    }
+
+  }
+  if (rawteamnumber===2) {
+    if (team.pawn1.isOut===true) {
+      if (team.pawn1.position<36) {
+        areas[team.pawn1.position-1].classList=`R-visible`;
+
+        team.pawn1.position+rollnumber;
+      }
+      else{
+        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
+      }
+    }
+  }
     
-    
+
+  if (rawteamnumber===3) {
+    if (team.pawn1.isOut===true) {
+      if (team.pawn1.position<36) {
+        areas[team.pawn1.position-1].classList=`U-visible`;
+
+        team.pawn1.position+rollnumber;
+      }
+      else{
+        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
+      }
+    }
+  }
+  if (rawteamnumber===4) {
+    if (team.pawn1.isOut===true) {
+     if (team.pawn1.position<36) {
+       areas[team.pawn1.position-1].classList=`H-visible`;
+
+       team.pawn1.position+rollnumber;
+      }
+      else{
+        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
+      }
+    }
   }
 }
-function checkPerfectRole(rollNumber,team){
+function checkPerfectRole(rollNumber,team) {
   if(rollNumber===6){
     if (team==1) {
       if (memory.player1.pawn1.isOut==false) {
         memory.player1.pawn1.isOut=true;
         memory.player1.pawn1.position=1;
       }
-      if (memory.player1.pawn2.isOut==false) {
+      else if (memory.player1.pawn2.isOut==false) {
         memory.player1.pawn2.isOut=true;
         memory.player1.pawn2.position=1;
       }
-      if (memory.player1.pawn3.isOut==false) {
+      else if (memory.player1.pawn3.isOut==false) {
         memory.player1.pawn3.isOut=true;
         memory.player1.pawn3.position=1;
       }
-      if (memory.player1.pawn4.isOut==false) {
+      else if (memory.player1.pawn4.isOut==false) {
         memory.player1.pawn4.isOut=true;
         memory.player1.pawn4.position=1;
+      }
+    }
+    if (team==2) {
+      if (memory.player2.pawn1.isOut==false) {
+        memory.player2.pawn1.isOut=true;
+        memory.player2.pawn1.position=28;
+
+      }
+      else if (memory.player2.pawn2.isOut==false) {
+        memory.player2.pawn2.isOut=true;
+        memory.player2.pawn2.position=28;
+      }
+      else if (memory.player2.pawn3.isOut==false) {
+        memory.player2.pawn3.isOut=true;
+        memory.player2.pawn3.position=28;
+      }
+      else if (memory.player1.pawn4.isOut==false) {
+        memory.player2.pawn4.isOut=true;
+        memory.player2.pawn4.position=28;
+      }
+    }
+    if (team==3) {
+      if (memory.player3.pawn1.isOut==false) {
+        memory.player3.pawn1.isOut=true;
+        memory.player3.pawn1.position=19;
+      }
+      else if (memory.player3.pawn2.isOut==false) {
+        memory.player3.pawn2.isOut=true;
+        memory.player3.pawn2.position=19;
+      }
+      else if (memory.player3.pawn3.isOut==false) {
+        memory.player3.pawn3.isOut=true;
+        memory.player3.pawn3.position=19;
+      }
+      else if (memory.player3.pawn4.isOut==false) {
+        memory.player3.pawn4.isOut=true;
+        memory.player3.pawn4.position=19;
+      }
+    }
+    if (team==4) {
+      if (memory.player4.pawn1.isOut==false) {
+        memory.player4.pawn1.isOut=true;
+        memory.player4.pawn1.position=10;
+      }
+      else if (memory.player4.pawn2.isOut==false) {
+        memory.player4.pawn2.isOut=true;
+        memory.player4.pawn2.position=10;
+      }
+      else if (memory.player4.pawn3.isOut==false) {
+        memory.player4.pawn3.isOut=true;
+        memory.player4.pawn3.position=10;
+      }
+      else if (memory.player1.pawn4.isOut==false) {
+        memory.player4.pawn4.isOut=true;
+        memory.player4.pawn4.position=10;
       }
     }
   }
