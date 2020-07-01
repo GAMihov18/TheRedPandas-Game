@@ -262,53 +262,34 @@ function resetGame(){
 function movePawns(rollnumber,team, rawteamnumber) {
   if (rawteamnumber===1) {
     if (team.pawn1.isOut===true) {
-      if (team.pawn1.position<=36) {
-        areas[team.pawn1.position-1].classList=`B-visible`;
-
-        team.pawn1.position+rollnumber;
-      }
-      else{
-        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
-      }
+      areas[team.pawn1.position-1].classList=`B-visible`;
     }
-
+    team.pawn1.position+=rollnumber;
   }
   if (rawteamnumber===2) {
     if (team.pawn1.isOut===true) {
-      if (team.pawn1.position<36) {
-        areas[team.pawn1.position-1].classList=`R-visible`;
-
-        team.pawn1.position+rollnumber;
-      }
-      else{
-        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
-      }
+      areas[team.pawn1.position-1].classList=`R-visible`;
     }
+    team.pawn1.position+=rollnumber;
   }
-    
-
   if (rawteamnumber===3) {
     if (team.pawn1.isOut===true) {
-      if (team.pawn1.position<36) {
-        areas[team.pawn1.position-1].classList=`U-visible`;
+      areas[team.pawn1.position-1].classList=`U-visible`;
+    }
+        newposition = team.pawn1.position+=rollnumber;
 
-        team.pawn1.position+rollnumber;
-      }
-      else{
-        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
-      }
+    if (team.pawn1.position>36) {
+      team.pawn1.position = newposition-team.pawn1.position;
     }
   }
   if (rawteamnumber===4) {
     if (team.pawn1.isOut===true) {
-     if (team.pawn1.position<36) {
-       areas[team.pawn1.position-1].classList=`H-visible`;
+      areas[team.pawn1.position-1].classList=`H-visible`;
+    }
+    newposition = team.pawn1.position+=rollnumber;
 
-       team.pawn1.position+rollnumber;
-      }
-      else{
-        team.pawn1.position=(team.pawn1.position+rollnumber)-team.pawn1.position;
-      }
+    if (team.pawn1.position>36) {
+      team.pawn1.position = newposition-team.pawn1.position;
     }
   }
 }
