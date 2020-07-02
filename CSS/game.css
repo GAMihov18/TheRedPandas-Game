@@ -64,7 +64,7 @@ body{
 	color: #fff;
 }
 .game-board{
-	background-image: url(/images/Trouble_Board_PSD1.jpg);
+	background-image: url(../images/Trouble_Board_PSD1.jpg);
 	background-repeat: no-repeat;
 	width: 600px;
 	height: 600px;
@@ -81,7 +81,7 @@ img{
 }
 
 .B-visible{
-	background-image: url(/images/Trouble_B.png);
+	background-image: url(../images/Trouble_B.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
@@ -89,7 +89,7 @@ img{
 	background-size:contain;
 }
 .R-visible{
-	background-image: url(/images/RLetter.png);
+	background-image: url(../images/RLetter.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
@@ -98,7 +98,7 @@ img{
 }
 
 .U-visible{
-	background-image: url(/images/Uletter.png);
+	background-image: url(../images/Uletter.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
@@ -107,7 +107,7 @@ img{
 }
 
 .H-visible{
-	background-image: url(/images/HletterBruh.png);
+	background-image: url(../images/HletterBruh.png);
 	visibility: visible;
 	position: absolute;
 	height: 50px;
@@ -115,7 +115,7 @@ img{
 	background-size:contain;
 }
 .one-visible{
-	background-image: url(/images/DiceSides/Dice1.png);
+	background-image: url(../images/DiceSides/Dice1.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
@@ -124,7 +124,7 @@ img{
 	background-repeat: no-repeat;
 }
 .two-visible{
-	background-image: url(/images/DiceSides/Dice2.png);
+	background-image: url(../images/DiceSides/Dice2.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
@@ -133,7 +133,7 @@ img{
 	background-repeat: no-repeat;
 }
 .three-visible{
-	background-image: url(/images/DiceSides/Dice3.png);
+	background-image: url(../images/DiceSides/Dice3.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
@@ -142,7 +142,7 @@ img{
 	background-repeat: no-repeat;
 }
 .four-visible{
-	background-image: url(/images/DiceSides/Dice4.png);
+	background-image: url(../images/DiceSides/Dice4.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
@@ -151,7 +151,7 @@ img{
 	background-repeat: no-repeat;
 }
 .five-visible{
-	background-image: url(/images/DiceSides/Dice5.png);
+	background-image: url(../images/DiceSides/Dice5.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
@@ -160,7 +160,7 @@ img{
 	background-repeat: no-repeat;
 }
 .six-visible{
-	background-image: url(/images/DiceSides/Dice6.png);
+	background-image: url(../images/DiceSides/Dice6.png);
 	visibility: visible;
 	background-size:contain;
 	position: absolute;
