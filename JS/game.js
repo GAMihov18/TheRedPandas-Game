@@ -53,25 +53,29 @@ const memory={
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area1')
+      pawnSpawnPoint: document.getElementById('spawn-area1'),
+      haswaitedoneturn:false,
     },
     pawn2:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area2')
+      pawnSpawnPoint: document.getElementById('spawn-area2'),
+      haswaitedoneturn:false,
     },
     pawn3:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area3')
+      pawnSpawnPoint: document.getElementById('spawn-area3'),
+      haswaitedoneturn:false,
     },
     pawn4:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area4')
+      pawnSpawnPoint: document.getElementById('spawn-area4'),
+      haswaitedoneturn:false,
     },
   },
   player2:{
@@ -81,25 +85,29 @@ const memory={
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area5')
+      pawnSpawnPoint: document.getElementById('spawn-area5'),
+      haswaitedoneturn:false,
     },
     pawn2:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area6')
+      pawnSpawnPoint: document.getElementById('spawn-area6'),
+      haswaitedoneturn:false,
     },
     pawn3:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area7')
+      pawnSpawnPoint: document.getElementById('spawn-area7'),
+      haswaitedoneturn:false,
     },
     pawn4:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area8')
+      pawnSpawnPoint: document.getElementById('spawn-area8'),
+      haswaitedoneturn:false,
     },
   },
   player3:{
@@ -109,25 +117,29 @@ const memory={
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area9')
+      pawnSpawnPoint: document.getElementById('spawn-area9'),
+      haswaitedoneturn:false,
     },
     pawn2:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area10')
+      pawnSpawnPoint: document.getElementById('spawn-area10'),
+      haswaitedoneturn:false,
     },
     pawn3:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area11')
+      pawnSpawnPoint: document.getElementById('spawn-area11'),
+      haswaitedoneturn:false,
     },
     pawn4:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area12')
+      pawnSpawnPoint: document.getElementById('spawn-area12'),
+      haswaitedoneturn:false,
     },
   },
   player4:{
@@ -137,25 +149,29 @@ const memory={
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area13')
+      pawnSpawnPoint: document.getElementById('spawn-area13'),
+      haswaitedoneturn:false,
     },
     pawn2:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area14')
+      pawnSpawnPoint: document.getElementById('spawn-area14'),
+      haswaitedoneturn:false,
     },
     pawn3:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area15')
+      pawnSpawnPoint: document.getElementById('spawn-area15'),
+      haswaitedoneturn:false,
     },
     pawn4:{
       position:0,
       isOut:false,
       hasBeenOnSpawn:false,
-      pawnSpawnPoint: document.getElementById('spawn-area16')
+      pawnSpawnPoint: document.getElementById('spawn-area16'),
+      haswaitedoneturn:false,
     },
   },
 };
@@ -261,38 +277,87 @@ function resetGame(){
   infoTurnAmount.innerHTML='';
   infoTurn.innerHTML='';
 }
+function drawPawns(){
+
+    if (memory.player1.pawn1.isOut===true) {
+      areas[memory.player1.pawn1.position-1].classList=`B-visible`;
+    }
+
+
+    if (memory.player2.pawn1.isOut===true) {
+      areas[memory.player2.pawn1.position-1].classList=`R-visible`;
+    }
+
+
+    if (memory.player3.pawn1.isOut===true) {
+      areas[memory.player3.pawn1.position-1].classList=`U-visible`;
+    }
+
+    if (memory.player4.pawn1.isOut===true) {
+      areas[memory.player4.pawn1.position-1].classList=`H-visible`;
+    }
+
+}
 function movePawns(rollnumber,team, rawteamnumber) {
   if (rawteamnumber===1) {
-    if (team.pawn1.isOut===true) {
-      areas[team.pawn1.position-1].classList=`B-visible`;
-    }
-    team.pawn1.position+=rollnumber;
+    if (team.pawn1.haswaitedoneturn===true && team.pawn1.isOut===true) {
+      if (team.pawn1.position+rollnumber>36) {
+        team.pawn1.position=(team.pawn1.position+rollnumber)-36
+      } 
+      else {
+        team.pawn1.position+=rollnumber;
+      }
+    } 
+    if (team.pawn1.haswaitedoneturn===false && team.pawn1.isOut===true) {
+      team.pawn1.haswaitedoneturn=true;
+    } 
+    hideLoaded();
+    drawPawns();
   }
   if (rawteamnumber===2) {
-    if (team.pawn1.isOut===true) {
-      areas[team.pawn1.position-1].classList=`R-visible`;
-    }
-    team.pawn1.position+=rollnumber;
+    if (team.pawn1.haswaitedoneturn===true && team.pawn1.isOut===true) {
+      if (team.pawn1.position+rollnumber>36) {
+        team.pawn1.position=(team.pawn1.position+rollnumber)-36
+      } 
+      else {
+        team.pawn1.position+=rollnumber;
+      }
+    } 
+    if (team.pawn1.haswaitedoneturn===false && team.pawn1.isOut===true) {
+      team.pawn1.haswaitedoneturn=true;
+    } 
+    hideLoaded();
+    drawPawns();
   }
   if (rawteamnumber===3) {
-    if (team.pawn1.isOut===true) {
-      areas[team.pawn1.position-1].classList=`U-visible`;
-    }
-        newposition = team.pawn1.position+=rollnumber;
-
-    if (team.pawn1.position>36) {
-      team.pawn1.position = newposition-team.pawn1.position;
-    }
+    if (team.pawn1.haswaitedoneturn===true && team.pawn1.isOut===true) {
+      if (team.pawn1.position+rollnumber>36) {
+        team.pawn1.position=(team.pawn1.position+rollnumber)-36
+      } 
+      else {
+        team.pawn1.position+=rollnumber;
+      }
+    } 
+    if (team.pawn1.haswaitedoneturn===false && team.pawn1.isOut===true) {
+      team.pawn1.haswaitedoneturn=true;
+    } 
+    hideLoaded();
+    drawPawns();
   }
   if (rawteamnumber===4) {
-    if (team.pawn1.isOut===true) {
-      areas[team.pawn1.position-1].classList=`H-visible`;
-    }
-    newposition = team.pawn1.position+=rollnumber;
-
-    if (team.pawn1.position>36) {
-      team.pawn1.position = newposition-team.pawn1.position;
-    }
+    if (team.pawn1.haswaitedoneturn===true && team.pawn1.isOut===true) {
+      if (team.pawn1.position+rollnumber>36) {
+        team.pawn1.position=(team.pawn1.position+rollnumber)-36
+      } 
+      else {
+        team.pawn1.position+=rollnumber;
+      }
+    } 
+    if (team.pawn1.haswaitedoneturn===false && team.pawn1.isOut===true) {
+      team.pawn1.haswaitedoneturn=true;
+    } 
+    hideLoaded();
+    drawPawns();
   }
 }
 function checkPerfectRole(rollNumber,team) {
